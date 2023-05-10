@@ -65,7 +65,9 @@ updateTextContent(document.querySelector('.top-content h4'), siteContent["main-c
 updateTextContent(document.querySelector('.top-content p'), siteContent["main-content"]["features-content"]);
 updateTextContent(document.querySelectorAll(".top-content, .text-content h4")[2], siteContent["main-content"]["about-h4"]);
 updateTextContent(document.querySelectorAll(".top-content, .text-content p")[2], siteContent["main-content"]["about-content"]);
-updateTextContent(document.querySelector('.bottom-content h4'), siteContent["main-content"]["services-h4"])
-updateTextContent(document.querySelector('.bottom-content p'), siteContent["main-content"]["services-content"])
-updateTextContent(document.querySelectorAll(".text-content:nth-child(2) h4")[1], siteContent["main-content"]["features-h4"]);
-updateTextContent(document.querySelectorAll(".text-content:nth-child(2) p")[1], siteContent["main-content"]["features-content"]);
+updateTextContent(document.querySelector('.bottom-content .text-content h4'), siteContent["main-content"]["services-h4"])
+updateTextContent(document.querySelector('.bottom-content .text-content p'), siteContent["main-content"]["services-content"])
+updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[1], siteContent["main-content"]["features-h4"]);
+updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[1], siteContent["main-content"]["features-content"]);
+updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[2], siteContent["main-content"]["vision-h4"]);
+updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[2], siteContent["main-content"]["vision-content"]);
