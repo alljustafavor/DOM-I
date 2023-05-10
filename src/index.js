@@ -43,8 +43,6 @@ const mainNavBar = document.querySelectorAll('a');
 mainNavBar.forEach(ele => ele.setAttribute("class", "italic"));
 console.log(mainNavBar)
 
-const callToActionHeading = document.querySelector("h1");
-callToActionHeading.textContent = siteContent["cta"]['h1']
 
 const updateCallToActionContent = (element, text) => {
   element.textContent = text
@@ -65,5 +63,9 @@ const updateTextContent = (element, text) => {
   };
 updateTextContent(document.querySelector('.top-content h4'), siteContent["main-content"]["features-h4"]);
 updateTextContent(document.querySelector('.top-content p'), siteContent["main-content"]["features-content"]);
-updateTextContent(document.querySelectorAll(".text-content h4")[2], siteContent["main-content"]["about-h4"]);
-updateTextContent(document.querySelectorAll(".text-content p")[2], siteContent["main-content"]["about-content"]);
+updateTextContent(document.querySelectorAll(".top-content, .text-content h4")[2], siteContent["main-content"]["about-h4"]);
+updateTextContent(document.querySelectorAll(".top-content, .text-content p")[2], siteContent["main-content"]["about-content"]);
+updateTextContent(document.querySelector('.bottom-content h4'), siteContent["main-content"]["services-h4"])
+updateTextContent(document.querySelector('.bottom-content p'), siteContent["main-content"]["services-content"])
+updateTextContent(document.querySelectorAll(".text-content:nth-child(2) h4")[1], siteContent["main-content"]["features-h4"]);
+updateTextContent(document.querySelectorAll(".text-content:nth-child(2) p")[1], siteContent["main-content"]["features-content"]);
