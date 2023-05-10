@@ -39,9 +39,9 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-const mainNavBar = document.querySelectorAll('a');
-mainNavBar.forEach(ele => ele.setAttribute("class", "italic"));
-console.log(mainNavBar)
+// const mainNavBar = document.querySelectorAll('a');
+// mainNavBar.forEach(ele => ele.setAttribute("class", "italic"));
+// console.log(mainNavBar)
 
 
 const updateCallToActionContent = (element, text) => {
@@ -71,3 +71,18 @@ updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[
 updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[1], siteContent["main-content"]["features-content"]);
 updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[2], siteContent["main-content"]["vision-h4"]);
 updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[2], siteContent["main-content"]["vision-content"]);
+
+const updateContact = (element, text) => {
+  element.textContent = text;
+};
+
+updateContact(document.querySelector(".contact h4"), siteContent["contact"]["contact-h4"]);
+updateContact(document.querySelectorAll(".contact p")[0], siteContent["contact"]["address"]);
+updateContact(document.querySelectorAll(".contact p")[1], siteContent["contact"]["phone"]);
+updateContact(document.querySelectorAll(".contact p")[2], siteContent["contact"]["email"]);
+
+const updateFooterCopyright = (element, text) => {
+  element.textContent = text;
+};
+
+updateFooterCopyright(document.querySelector("footer a"), siteContent["footer"]["copyright"]);
