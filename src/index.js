@@ -39,4 +39,31 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+const mainNavBar = document.querySelectorAll('a');
+mainNavBar.forEach(ele => ele.setAttribute("class", "italic"));
+console.log(mainNavBar)
+
+const firstImg = document.querySelector("img")
+firstImg.src = siteContent["images"]["logo-img"];
+
+const callToActionHeading = document.querySelector("h1");
+callToActionHeading.textContent = siteContent["cta"]['h1']
+
+const callToActionButton = document.querySelector("button");
+callToActionButton.textContent = siteContent["cta"]["button"];
+
+const callToActionImg = document.querySelector("#cta-img");
+callToActionImg.src = siteContent["images"]["cta-img"]
+
+const mainContentImg = document.querySelector(".middle-img");
+mainContentImg.src = siteContent["images"]["accent-img"];
+
+
+const updateTextContent = (element, text) => {
+  element.textContent = text;
+  };
+
+updateTextContent(document.querySelector('.top-content h4'), siteContent["main-content"]["features-h4"]);
+updateTextContent(document.querySelector('.top-content p'), siteContent["main-content"]["features-content"]);
+updateTextContent(document.querySelectorAll(".text-content h4")[2], siteContent["main-content"]["about-h4"]);
+updateTextContent(document.querySelectorAll(".text-content p")[2], siteContent["main-content"]["about-content"]);
