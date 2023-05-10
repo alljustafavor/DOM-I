@@ -46,8 +46,11 @@ console.log(mainNavBar)
 const callToActionHeading = document.querySelector("h1");
 callToActionHeading.textContent = siteContent["cta"]['h1']
 
-const callToActionButton = document.querySelector("button");
-callToActionButton.textContent = siteContent["cta"]["button"];
+const updateCallToActionContent = (element, text) => {
+  element.textContent = text
+}
+updateCallToActionContent(document.querySelector("button"), siteContent["cta"]["button"]);
+updateCallToActionContent(document.querySelector("h1"), siteContent["cta"]["h1"]);
 
 const updateImgContent = (element, url) => {
   element.src = url
