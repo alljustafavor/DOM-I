@@ -39,10 +39,12 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-// const mainNavBar = document.querySelectorAll('a');
-// mainNavBar.forEach(ele => ele.setAttribute("class", "italic"));
-// console.log(mainNavBar)
-
+const navLinks = document.querySelectorAll("header nav a")
+const navLinkText = Object.values(siteContent.nav)
+navLinks.forEach((link, index) => {
+  link.textContent = navLinkText[index]
+  link.classList.add('italic')
+})
 
 const updateCallToActionContent = (element, text) => {
   element.textContent = text
@@ -67,8 +69,8 @@ updateTextContent(document.querySelectorAll(".top-content, .text-content h4")[2]
 updateTextContent(document.querySelectorAll(".top-content, .text-content p")[2], siteContent["main-content"]["about-content"]);
 updateTextContent(document.querySelector('.bottom-content .text-content h4'), siteContent["main-content"]["services-h4"])
 updateTextContent(document.querySelector('.bottom-content .text-content p'), siteContent["main-content"]["services-content"])
-updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[1], siteContent["main-content"]["features-h4"]);
-updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[1], siteContent["main-content"]["features-content"]);
+updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[1], siteContent["main-content"]["product-h4"]);
+updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[1], siteContent["main-content"]["product-content"]);
 updateTextContent(document.querySelectorAll(".bottom-content .text-content h4")[2], siteContent["main-content"]["vision-h4"]);
 updateTextContent(document.querySelectorAll(".bottom-content .text-content p")[2], siteContent["main-content"]["vision-content"]);
 
@@ -81,8 +83,13 @@ updateContact(document.querySelectorAll(".contact p")[0], siteContent["contact"]
 updateContact(document.querySelectorAll(".contact p")[1], siteContent["contact"]["phone"]);
 updateContact(document.querySelectorAll(".contact p")[2], siteContent["contact"]["email"]);
 
-const updateFooterCopyright = (element, text) => {
+const updateFooterCopyright = (element, text, classes) => {
   element.textContent = text;
+  if (classes) {
+    element.classList.add(classes);
+  }
 };
 
-updateFooterCopyright(document.querySelector("footer a"), siteContent["footer"]["copyright"]);
+
+updateFooterCopyright(document.querySelector("footer a"), siteContent["footer"]["copyright"], 'bold');
+
